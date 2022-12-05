@@ -13,19 +13,19 @@
     },
     {"tag": "about",
      "patterns": ["Who are you?", "What are you?", "Who you are?" ],
-     "responses": ["I am Diega, your bot assistant", "I'm Diega, an Artificial Intelligent bot"]
+     "responses": ["I am Diega, your assistant.", "I am Diega, an Artificial Intelligent bot"]
     },
     {"tag": "name",
     "patterns": ["what is your name", "what should I call you", "whats your name?"],
-    "responses": ["You can call me Diega.", "I'm Diega!", "Just call me as Diega"]
+    "responses": ["You can call me Diega.", "I am Diega!", "Just call me as Diega"]
     },
     {"tag": "help",
     "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please"],
-    "responses": ["Tell me how can assist you", "Tell me your problem to assist you", "Yes Sure, How can I support you"]
+    "responses": ["Tell me how can assist you", "Tell me your problem to assist you", "How can I support you"]
     },
-    {"tag": "complaint",
-    "patterns": ["have a complaint", "I want to raise a complaint", "there is a complaint about a service"],
-    "responses": ["Please provide us your complaint in order to assist you", "Please mention your complaint, we will reach you and sorry for any inconvenience caused"]
+    {"tag": "apply",
+    "patterns": ["How can I apply for the course?", "What is the application process like?", "How to apply?"],
+    "responses": ["1212121212", "343434343", "5656565656"]
     }
 ]
 }
