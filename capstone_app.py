@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 import random
 import pickle
 from streamlit_chat import message as st_message
-
+from PIL import Image
 
 with open("intents.json") as file:
     data = json.load(file)
@@ -24,8 +24,12 @@ with open('label_encoder.pickle', 'rb') as enc:
 max_len = 20
 
 
-st.title("Diega, Le Wagon Web Assistant")
+st.title("Diega, Le Wagon's Web Assistant")
 
+
+image = Image.open('images.png')
+
+st.image(image, caption='LeWagon logo', width =150)
 
 
 #tag = lbl_encoder.inverse_transform([np.argmax(result)])
