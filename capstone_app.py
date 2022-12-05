@@ -5,6 +5,8 @@ from tensorflow import keras
 from sklearn.preprocessing import LabelEncoder
 import random
 import pickle
+from streamlit_chat import message as st_message
+
 
 with open("intents.json") as file:
     data = json.load(file)
@@ -45,7 +47,8 @@ st.title("Hello Chatbot")
 
 
 #tag = lbl_encoder.inverse_transform([np.argmax(result)])
-
+if "history" not in st.session_state:
+    st.session_state.history = []
 
 def generate_answer():
     #tokenizer, model = get_models()
@@ -57,19 +60,27 @@ def generate_answer():
 
     #inputs = tokenizer(st.session_state.input_text, return_tensors="pt")
 
-    result = model.predict(keras.preprocessing.sequence.pad_sequences(tokenizer.texts_to_sequences([inputs]),
+    result = model.predict(keras.preprocessing.sequence.pad_sequences(tokenizer.texts_to_sequences([user_message]),
                                              truncating='post', maxlen=max_len))
 
+
+    tag = lbl_encoder.inverse_transform([np.argmax(result)])
+
+    for i in data['intents']:
+            if i['tag'] == tag:
+                st.session_state.history.append({"message": user_message, "is_user": True})
+                st.session_state.history.append({"message": np.random.choice(i['responses']), "is_user": False})
+                print (np.random.choice(i['responses']))
 
     #message_bot = tokenizer.decode(
     #    result[0], skip_special_tokens=True
     #)  # .replace("<s>", "").replace("</s>", "")
 
-    #st.session_state.history.append({"message": user_message, "is_user": True})
-    #st.session_state.history.append({"message": message_bot, "is_user": False})
+
+
 
 
 st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
 
-#for chat in st.session_state.history:
-#    st_message(**chat)  # unpacking
+for chat in st.session_state.history:
+    st_message(**chat)  # unpacking
