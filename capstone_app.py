@@ -68,9 +68,10 @@ def generate_answer():
 
     for i in data['intents']:
             if i['tag'] == tag:
-                st.session_state.history.append({"message": user_message, "is_user": True})
                 st.session_state.history.append({"message": np.random.choice(i['responses']), "is_user": False})
-                print (np.random.choice(i['responses']))
+                st.session_state.history.append({"message": user_message, "is_user": True})
+
+                #print (np.random.choice(i['responses']))
 
     #message_bot = tokenizer.decode(
     #    result[0], skip_special_tokens=True
