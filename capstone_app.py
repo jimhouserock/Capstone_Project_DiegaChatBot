@@ -42,7 +42,7 @@ max_len = 20
 # if "history" not in st.session_state:
 #     st.session_state.history = []
 
-st.title("Hello Chatbot")
+st.title("Diega, Le Wagon Web Assistant")
 
 
 
@@ -81,7 +81,7 @@ def generate_answer():
 
 
 
-st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
+st.text_input("Type in your questions below: ", key="input_text", on_change=generate_answer)
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
