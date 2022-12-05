@@ -8,7 +8,7 @@ from transformers import BlenderbotForConditionalGeneration
 def get_models():
     # it may be necessary for other frameworks to cache the model
     # seems pytorch keeps an internal state of the conversation
-    model_name = "facebook/blenderbot-400M-distill"
+    model_name = "./chat_model"
     tokenizer = BlenderbotTokenizer.from_pretrained(model_name)
     model = BlenderbotForConditionalGeneration.from_pretrained(model_name)
     return tokenizer, model
