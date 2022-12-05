@@ -24,10 +24,6 @@ with open('label_encoder.pickle', 'rb') as enc:
 max_len = 20
 
 
-#from streamlit_chat import message as st_message
-#from transformers import BlenderbotTokenizer
-#from transformers import BlenderbotForConditionalGeneration
-
 
 #@st.experimental_singleton
 # def get_models():
@@ -39,9 +35,6 @@ max_len = 20
 #     return tokenizer, model
 
 
-# if "history" not in st.session_state:
-#     st.session_state.history = []
-
 st.title("Diega, Le Wagon Web Assistant")
 
 
@@ -49,16 +42,15 @@ st.title("Diega, Le Wagon Web Assistant")
 #tag = lbl_encoder.inverse_transform([np.argmax(result)])
 if "history" not in st.session_state:
     st.session_state.history = []
+if 'generated' not in st.session_state:
+    st.session_state['generated'] = []
+
+if 'past' not in st.session_state:
+    st.session_state['past'] = []
 
 def generate_answer():
-    #tokenizer, model = get_models()
-
 
     user_message = st.session_state.input_text
-
-
-
-    #inputs = tokenizer(st.session_state.input_text, return_tensors="pt")
 
     result = model.predict(keras.preprocessing.sequence.pad_sequences(tokenizer.texts_to_sequences([user_message]),
                                              truncating='post', maxlen=max_len))
@@ -68,20 +60,21 @@ def generate_answer():
 
     for i in data['intents']:
             if i['tag'] == tag:
-                st.session_state.history.append({"message": np.random.choice(i['responses']), "is_user": False})
-                st.session_state.history.append({"message": user_message, "is_user": True})
+                out_message=np.random.choice(i['responses'])
 
+                #st.session_state.history.append({"message": out_message, "is_user": False})
+                #st.session_state.history.append({"message": user_message, "is_user": True})
+                st.session_state.past.append(user_message)
+                st.session_state.generated.append(out_message)
                 #print (np.random.choice(i['responses']))
-
-    #message_bot = tokenizer.decode(
-    #    result[0], skip_special_tokens=True
-    #)  # .replace("<s>", "").replace("</s>", "")
-
-
-
 
 
 st.text_input("Type in your questions below: ", key="input_text", on_change=generate_answer)
 
-for chat in st.session_state.history:
-    st_message(**chat)  # unpacking
+if st.session_state['generated']:
+
+    for i in range(len(st.session_state['generated'])-1, -1, -1):
+        st_message(st.session_state["generated"][i], key=str(i))
+        st_message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
+#for chat in st.session_state.history:
+#    st_message(**chat)  # unpacking
