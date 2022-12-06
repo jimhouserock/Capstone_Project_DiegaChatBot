@@ -163,6 +163,16 @@
     {"tag": "difference",
     "patterns": ["What's the main difference between Le Wagon and academic degree in Computer Science or Data Science?", "What's the main difference between thr Data Science course and academic degree?"],
     "responses": ["The main difference between an academic degree and a bootcamp is that we don't start from scratch and we learn with a lot of practice using modern tools and methods. \nIn an academic curriculum in CS or DS, you will start learning all the theoretical knowledge (e.g. hardware layer of your computer for a CS degree, or advanced concepts of linear algebra and statistics for a DS degree) before moving to applied topics like web development or machine learning."]
+    },
+
+    {"tag": "city",
+    "patterns":["How should I choose the right city to do the course?","How would you recommend a city for me to work on?"],
+    "responses":["Le Wagon fulfils the exact same mission in all of our locations. The curriculum is the same everywhere as are all of our materials (lectures and exercises). We suggest you think about each city's environment, quality of life and langugage!"]
+    },
+    {"tag": "job",
+    "patterns":["Will I be able to apply to a data scientist job?","Will I get a job afterwards?"],
+    "responses":["The job title 'Data Scientist' can correspond to very different roles depending on the company (startup, scale-up, big company), the product you're working on and the team you will join."],
+    "comment": ["the 22th question of FAQ https://www.lewagon.com/faq"]
     }
 
 
