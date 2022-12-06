@@ -58,7 +58,7 @@ def generate_answer():
                 #print (np.random.choice(i['responses']))
 
 
-st.text_input("Type in your questions below: ", key="input_text", on_change=generate_answer)
+st.text_input("Type your questions below: ", key="input_text", on_change=generate_answer)
 
 if st.session_state['generated']:
 
