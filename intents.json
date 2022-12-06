@@ -169,8 +169,8 @@
     "responses":["The job title 'Data Scientist' can correspond to very different roles depending on the company (startup, scale-up, big company), the product you're working on and the team you will join."]
     },
     {"tag": "Campus",
-    "patterns":["Where is the campus?","What is the address of the campus", "Where is the bootcamp located?"],
-    "responses":["Le Wagon Mexico, Alvaro Obregon 213, Roma Norte \nhttps://www.google.com/maps/place/Le+Wagon+Mexico+Coding+Station/@19.4174503,-99.1672478,17z/data=!4m5!3m4!1s0x85d1ff239affa219:0x5b93ec357f23d31c!8m2!3d19.4174484!4d-99.165043"]
+    "patterns":["Where is the campus?","What is the address of the campus", "Where is the bootcamp located?","Where is the bootcamp?"],
+    "responses":["Le Wagon Mexico, Alvaro Obregon 213, Roma Norte \nhttps://tinyurl.com/Le-Wagon-CDMX"]
     }
 
 
