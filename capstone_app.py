@@ -6,6 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 import random
 import pickle
 from streamlit_chat import message as st_message
+from PIL import Image
 
 
 with open("intents.json") as file:
@@ -23,7 +24,8 @@ with open('label_encoder.pickle', 'rb') as enc:
 # parameters
 max_len = 20
 
-
+image = Image.open('images.png')
+st.image(image, width=150)
 st.title("Diega, Le Wagon Web Assistant")
 
 
