@@ -84,8 +84,7 @@
     },
     {"tag": "schedule",
     "patterns": ["What is the course schedule?", "what is the level of commitment required?"],
-    "responses": ["The full-time bootcamp is a 9-week program, from Monday to Friday, 9am - 6pm. ",
-                 "The part-time bootcamp is a 24-week program, where students come for two on-campus sessions from 6:30pm to 9:30pm generally on Tuesday evening and Thursday evening and for an additional session on Saturday all day from 10am to 5pm."]
+    "responses": ["The full-time bootcamp is a 9-week program, from Monday to Friday, 9am - 6pm. ", "The part-time bootcamp is a 24-week program, where students come for two on-campus sessions from 6:30pm to 9:30pm generally on Tuesday evening and Thursday evening and for an additional session on Saturday all day from 10am to 5pm."]
     },
     {"tag": "company",
     "patterns": ["Can my company participate in your recruitment events?","Can my company recruit students?"],
@@ -168,6 +167,14 @@
     {"tag": "job",
     "patterns":["Will I be able to apply to a data scientist job?","Will I get a job afterwards?"],
     "responses":["The job title 'Data Scientist' can correspond to very different roles depending on the company (startup, scale-up, big company), the product you're working on and the team you will join."]
+    },
+    {"tag": "Campus",
+    "patterns":["Where is the campus?","What is the address of the campus", "Where is the bootcamp located?"],
+    "responses":["Le Wagon Mexico, Alvaro Obregon 213, Roma Norte \nhttps://www.google.com/maps/place/Le+Wagon+Mexico+Coding+Station/@19.4174503,-99.1672478,17z/data=!4m5!3m4!1s0x85d1ff239affa219:0x5b93ec357f23d31c!8m2!3d19.4174484!4d-99.165043"]
+    },
+    {"tag": "Campus",
+    "patterns":["Where is the campus?","What is the address of the campus", "Where is the bootcamp located?"],
+    "responses":["Le Wagon Mexico, Alvaro Obregon 213, Roma Norte \nhttps://www.google.com/maps/place/Le+Wagon+Mexico+Coding+Station/@19.4174503,-99.1672478,17z/data=!4m5!3m4!1s0x85d1ff239affa219:0x5b93ec357f23d31c!8m2!3d19.4174484!4d-99.165043"]
     }
 
 
