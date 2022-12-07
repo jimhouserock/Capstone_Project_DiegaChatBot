@@ -131,7 +131,7 @@
     },
 
     {"tag": "application",
-    "patterns": ["How can I apply for the course?", "What is the application process like?", "How to apply?"],
+    "patterns": ["How can I apply for the course?", "What is the application process like?", "How to apply?", "How can I book an interview?"],
     "responses": ["Complete the application form on our website by selecting: \nWeb Development & Data Science \n9-week full-time & 24-week part-time \nThe city \nWe will then contact you to schedule an interview (either in-person or online) to understand your motivations in more detail."]
     },
 
@@ -151,7 +151,7 @@
     },
 
     {"tag": "prepwork",
-    "patterns": ["Is there any preparation work once I get accepted?", "What's the preparation work?", "What should I study before joining the bootcamp"],
+    "patterns": ["Is there any preparation work once I get accepted?", "What's the preparation work?", "What should I study before joining the bootcamp", "What I will do in practice"],
     "responses": ["Yes, we will send you an online preparation work once you've passed all the selection process. This prepwork is absolutely mandatory and must be completed before the beginning of the bootcamp. \nWeb Development course: \nThis work takes around 60 hours and will give you a basic knowledge of how the web works, terminal basic commands, versioning and basic concepts of web development and tech workflows. \nData Science course: \nThis work takes around 40 hours and covers the basics of programming with Python and SQL as well as some key concepts of Mathematics used every day by data scientists."]
     },
 
@@ -211,12 +211,12 @@
     },
 
     {"tag": "payment type",
-     "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+     "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you accepting cash only?" ],
      "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
     },
 
     {"tag": "hours",
-         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+         "patterns": ["What hours is the campus open?", "When is the campus open?", "What time does the class start" ],
          "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
     },
 
@@ -228,6 +228,36 @@
     {"tag": "suggest",
       "patterns": ["you are useless","useless","suggest","suggestions","you are bad"],
       "responses": ["Please contact for your suggestions to our Admission and Sales Manager, Diego Garza. Thank you for helping me improve!"]
+    },
+
+    {"tag": "Mexican citizens & residents",
+      "patterns": ["What are the financing options for Mexican citizens?", "What are the financing options for Mexican residents?"],
+      "responses": ["Take a look at our financing options: \nPayments in 18 months. \nPlease check the following link for details: https://accedeeducacion.com/lewagon/ \nFull-time: Monthly payments of $3,450.15 pesos \nPlease check the following link for details: https://accedeeducacion.com/lewagonflex/ \nPart-time financing options: Monthly payments of $3,593.70 pesos \nPlease check the following link for details: https://accedeeducacion.com/lewagonflexpart/"]
+    },
+
+    {"tag": "10% discount",
+      "patterns": ["If I apply early, a discount is available?"],
+      "responses": ["Submit your program deposit two months prior to the program start date and receive a 10% discount on your program tuition! This discount is applicable for both our Web Development and Data Science Bootcamp and can be applied throughout the year.\nDiscounts are not accumulative."]
+    },
+
+    {"tag": "5% discount",
+      "patterns": ["If I pay upfront at once, a discount is available?"],
+      "responses": ["For everyone applying to Le Wagon in Mexico, you must just pay your entire tuition at the time of your enrollment to be eligible for the 5% discount.\nDiscounts are not accumulative."]
+    },
+
+    {"tag": "Alumni discount",
+      "patterns": ["Is alumni discount available?", "What is the percentage of the alumni discount?"],
+      "responses": ["If you want to study in Le Wagon because alumni recommended it to you. Receive a 10% discount. Important to mention the name of Le Wagon Alumni in your admissions process.\nDiscounts are not accumulative."]
+    },
+
+    {"tag": "Woman discount",
+      "patterns": ["Is there any discount option available for women?"],
+      "responses": ["We offer scholarships 10% discount to any woman aspiring to be a Le Wagon student.\nDiscounts are not accumulative."]
+    },
+
+    {"tag": "Data Analyst vs. Data Scientist",
+      "patterns": ["What is the difference between Data Analyst vs. Data Scientist?", "Could you tell me about teh difference Data Analyst vs. Data Scientist"],
+      "responses": ["A Data Analyst:\nUtilizes the data collected to draw insights based on patterns and trends.\nWorks with defined sets of data to answer the questions and needs of the business.\nWorks through data mining, statistical analysis, and SQL to retrieve data.\nCreates databases and data systems in order to better interpret the data.\nPrepares reports based on their findings of current trends in data.\nA Data Scientist, on the other hand:\nCreates algorithms and statistical models in order to get a sense of what’s unknown.\nOrganizes undefined data sets through the use of multiple data collection tools.\nCreates predictive algorithms in order to collect the necessary information from the data.\nWorks with object-oriented programming and machine learning.\nWorks with undefined sets of data to find the solution to complex problems."]
     }
 
 
