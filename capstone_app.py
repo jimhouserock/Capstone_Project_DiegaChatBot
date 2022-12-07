@@ -70,7 +70,7 @@ if st.session_state['generated']:
 
     for i in range(len(st.session_state['generated'])-1, -1, -1):
         st_message(st.session_state["generated"][i], is_user=False, avatar_style="bottts",seed="11", key=str(i))
-        st_message(st.session_state['past'][i], is_user=True,avatar_style="croodles-neutral",seed="4", key=str(i) + '_user')
+        st_message(st.session_state['past'][i], is_user=True,avatar_style="adventurer-neutral",seed="2", key=str(i) + '_user')
 
 #for chat in st.session_state.history:
 #    st_message(**chat)  # unpacking
